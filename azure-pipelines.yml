@@ -30,3 +30,5 @@ steps:
 
 - script: php artisan migrate
   displayName: 'Run database migration'
+
+- task: PublishBuildArtifacts@1
