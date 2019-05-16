@@ -28,5 +28,5 @@ steps:
 - script: printf '%s\n' 'DB_CONNECTION=mysql' 'DB_HOST=nanyukiappfactory-mysqldbserver.mysql.database.azure.com' 'DB_PORT=3306' 'DB_DATABASE=birdboard' 'DB_USERNAME=alvaro@nanyukiappfactory-mysqldbserver' 'DB_PASSWORD=r6r5bb!!' > .env
   displayName: 'Create .env and database config'
 
-- script: echo .env
-  displayName: 'View .env'
+- script: php artisan migrate
+  displayName: 'Run database migration'
