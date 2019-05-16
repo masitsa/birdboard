@@ -24,9 +24,3 @@ steps:
 
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
-
-- script: php artisan key:generate
-  displayName: 'Generate Key'
-
-- script: vendor/bin/phpunit
-  displayName: 'Testing'
