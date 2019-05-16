@@ -30,6 +30,3 @@ steps:
 
 - script: php artisan migrate
   displayName: 'Run database migration'
-
-- script: ./vendor/bin/phpunit
-  displayName: 'Run tests'
