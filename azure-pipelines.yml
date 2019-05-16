@@ -25,11 +25,8 @@ steps:
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
 
-- script: cat > .env
-  displayName: 'Create .env file'
-
-- script: echo 'DB_CONNECTION=mysql \n DB_HOST=nanyukiappfactory-mysqldbserver.mysql.database.azure.com \n DB_PORT=3306 \n DB_DATABASE=birdboard \n DB_USERNAME=alvaro@nanyukiappfactory-mysqldbserver \n DB_PASSWORD=r6r5bb!!'
-  displayName: 'Create database config'
+- script: printf '%s\n' 'DB_CONNECTION=mysql' 'DB_HOST=nanyukiappfactory-mysqldbserver.mysql.database.azure.com' 'DB_PORT=3306' 'DB_DATABASE=birdboard' 'DB_USERNAME=alvaro@nanyukiappfactory-mysqldbserver' 'DB_PASSWORD=r6r5bb!!' > .env
+  displayName: 'Create .env and database config'
 
 - script: echo .env
   displayName: 'View .env'
